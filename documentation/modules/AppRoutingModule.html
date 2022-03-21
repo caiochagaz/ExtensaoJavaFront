@@ -1,0 +1,216 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>empresa1-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">empresa1-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content module">
+                   <div class="content-data">
+
+
+
+<ol class="breadcrumb">
+    <li>Modules</li>
+    <li >AppRoutingModule</li>
+</ol>
+
+
+<ul class="nav nav-tabs" role="tablist">
+    <li  class="active" >
+        <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+    <li >
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/app-routing.module.ts</code>
+        </p>
+
+
+
+
+
+        <div class="container-fluid module">
+            <div class="row">
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ListaGeralFuncionariosComponent } from &#x27;./views/Funcionario/lista-geral-funcionarios/lista-geral-funcionarios.component&#x27;;
+import { AtribuirCargoComponent } from &#x27;./views/Funcionario/atribuir-cargo/atribuir-cargo.component&#x27;;
+import { ExclusaoBoletoComponent } from &#x27;./views/Boleto/exclusao-boleto/exclusao-boleto.component&#x27;;
+import { EdicaoBoletoComponent } from &#x27;./views/Boleto/edicao-boleto/edicao-boleto.component&#x27;;
+import { CadastroBoletoComponent } from &#x27;./views/Boleto/cadastro-boleto/cadastro-boleto.component&#x27;;
+import { EdicaoMentorComponent } from &#x27;./views/Mentor/edicao-mentor/edicao-mentor.component&#x27;;
+import { ExclusaoMentorComponent } from &#x27;./views/Mentor/exclusao-mentor/exclusao-mentor.component&#x27;;
+import { CadastroMentorComponent } from &#x27;./views/Mentor/cadastro-mentor/cadastro-mentor.component&#x27;;
+import { AtribuirCargoDoMentorComponent } from &#x27;./views/Mentor/atribuir-cargo-do-mentor/atribuir-cargo-do-mentor.component&#x27;;
+import { MentorDoCargoComponent } from &#x27;./views/Mentor/mentor-do-cargo/mentor-do-cargo.component&#x27;;
+import { ListaMentorComponent } from &#x27;./views/Mentor/lista-mentor/lista-mentor.component&#x27;;
+import { EdicaoFuncionarioComponent } from &#x27;./views/Funcionario/edicao-funcionario/edicao-funcionario.component&#x27;;
+import { CadastroFuncionarioComponent } from &#x27;./views/Funcionario/cadastro-funcionario/cadastro-funcionario.component&#x27;;
+import { ListaFuncionarioComponent } from &#x27;./views/Funcionario/lista-funcionario/lista-funcionario.component&#x27;;
+import { CadastroCargoComponent } from &#x27;./views/Cargo/cadastro-cargo/cadastro-cargo.component&#x27;;
+import { EdicaoCargoComponent } from &#x27;./views/Cargo/edicao-cargo/edicao-cargo.component&#x27;;
+import { ExclusaoCargoComponent } from &#x27;./views/Cargo/exclusao-cargo/exclusao-cargo.component&#x27;;
+import { ExclusaoFuncionarioComponent } from &#x27;./views/Funcionario/exclusao-funcionario/exclusao-funcionario.component&#x27;;
+import { ListaCargoComponent } from &#x27;./views/Cargo/lista-cargo/lista-cargo.component&#x27;;
+import { HomeComponent } from &#x27;./templates/home/home.component&#x27;;
+import { NgModule } from &#x27;@angular/core&#x27;;
+import { RouterModule, Routes } from &#x27;@angular/router&#x27;;
+import { BoletoMentorComponent } from &#x27;./views/Boleto/boleto-mentor/boleto-mentor.component&#x27;;
+
+const routes: Routes &#x3D; [
+  {path: &quot;&quot;, redirectTo: &quot;/home&quot;, pathMatch: &quot;full&quot;},
+  {path: &quot;home&quot;, component: HomeComponent},
+
+  //Rotas Cargo
+  {path: &quot;cargo&quot;, component: ListaCargoComponent},
+  {path: &quot;excluirCargo/:id_cargo&quot;, component: ExclusaoCargoComponent},
+  {path: &quot;editarCargo/:id_cargo&quot;, component: EdicaoCargoComponent},
+  {path: &quot;cadastrarCargo&quot;, component: CadastroCargoComponent},
+
+  //Rotas Funcionário
+  {path: &quot;funcCargo/:id_cargo&quot;, component: ListaFuncionarioComponent},
+  {path: &quot;cadastrarFunc&quot;, component: CadastroFuncionarioComponent},
+  {path: &quot;editarFunc/:id_funcionario/:id_cargo&quot;, component: EdicaoFuncionarioComponent},
+  {path: &quot;excluirFunc/:id_funcionario&quot;, component: ExclusaoFuncionarioComponent},
+  {path: &quot;funcionario/atribuirCargo/:id_funcionario/:id_cargo&quot;, component: AtribuirCargoComponent},
+  {path: &quot;funcionario&quot;, component: ListaGeralFuncionariosComponent},
+
+  //Rotas Mentor
+  {path: &quot;mentores&quot;, component: ListaMentorComponent},
+  {path: &quot;mentor/:id_cargo&quot;, component: MentorDoCargoComponent}, //ProfessorDaTurma
+  {path: &quot;mentor/atribuirCargo/:id_mentor&quot;, component: AtribuirCargoDoMentorComponent},
+  {path: &quot;mentores/cadastrar&quot;, component: CadastroMentorComponent},
+  {path: &quot;mentores/excluir/:id_mentor&quot;, component: ExclusaoMentorComponent},
+  {path: &quot;mentores/editar/:id_mentor/:id_cargo&quot;, component: EdicaoMentorComponent},
+
+  //Rotas Boleto
+  {path:&quot;boleto/cadastro/:id_mentor&quot;, component:CadastroBoletoComponent},
+  {path:&quot;boleto/edicao/:codigo/:id_mentor&quot;, component:EdicaoBoletoComponent},
+  {path:&quot;boleto/exclusao/:codigo/:id_mentor&quot;, component:ExclusaoBoletoComponent},
+  {path:&quot;boleto/lista/:id_mentor&quot;, component:BoletoMentorComponent},
+
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
+            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
